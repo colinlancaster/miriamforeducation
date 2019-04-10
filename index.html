@@ -1,3 +1,7 @@
+---
+# to get jekyll to process your page, you need to add front matter
+# even if it is empty
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +11,7 @@
   <title>Miriam G. Cummins</title>
 </head>
 <body>
-  <h1>Hello World</h1>
+  {% include navigation.html %}
+  <h1>{{ site.title }}</h1>
 </body>
 </html>
