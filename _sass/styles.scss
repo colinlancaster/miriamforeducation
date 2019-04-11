@@ -1,0 +1,46 @@
+// Reset
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  // Forces inheritance for the box-sizing prop
+  box-sizing: inherit;
+}
+
+// Variables
+
+$color-primary: #2B546E;
+$color-highlight: #FE0000;
+$color-primary-dark: #052539;
+$color-primary-light-1: #4B7189;
+$color-primary-light-2: #7391A4;
+
+// General
+
+html {
+  // Defines default `font-size` of 1rem
+  font-size: 62.5%; // 10px
+  background-color: white;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  background-color: $color-primary;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+// Navigation
+
+.nav {
+  display: grid;
+  &__list {}
+
+  &--item {}
+}
+.nav ul li {
+  display: inline-block;
+}
