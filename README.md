@@ -6,3 +6,6 @@ Then the files go through concatenation, compression, and auto-prefixing. They g
 
 `npm run build:css` to build the css and compile it into the styles.css file.
 
+## Social Links
+
+https://www.facebook.com/MiriamGCumminsforEducation
