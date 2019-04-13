@@ -12,5 +12,4 @@ However, when the site is being served by GitHub Pages, you will need to prepend
 
 ## Social Links
 
-https://www.facebook.com/MiriamGCumminsforEducation
-
+[Text](https://www.facebook.com/MiriamGCumminsforEducation)
