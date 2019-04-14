@@ -469,3 +469,6 @@ object {
 
 .about p {
   margin: 2rem; }
+
+.contact {
+  height: 100vh; }

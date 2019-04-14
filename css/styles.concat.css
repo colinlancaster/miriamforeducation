@@ -454,7 +454,18 @@ object {
   transform: rotate(-135deg);
   top: 0; }
 
-.about {
-  margin: 0 auto; }
-  .about__wrapper {
-    width: 65%; }
+.about__wrapper {
+  margin: 0 auto;
+  margin-top: 15rem;
+  width: 65%; }
+
+.about__image-wrap {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
+
+.about .image {
+  border-radius: 50%; }
+
+.about p {
+  margin: 2rem; }
