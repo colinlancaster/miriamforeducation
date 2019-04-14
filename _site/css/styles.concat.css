@@ -8,6 +8,15 @@
 .center {
   text-align: center; }
 
+.content {
+  margin: 0 auto; }
+
+a {
+  color: #fff; }
+
+a:visited {
+  color: darkred; }
+
 html {
   font-size: 62.5%;
   height: 100%; }
@@ -17,10 +26,8 @@ body {
   font-weight: 400;
   line-height: 1.7;
   background-image: repeating-linear-gradient(#4B7189 0%, #2B546E 100%);
-  background-attachment: fixed; }
-
-.content {
-  margin: 0 auto; }
+  background-attachment: fixed;
+  color: #fff; }
 
 h1 {
   font-size: 4rem;
@@ -117,7 +124,7 @@ li {
   font-size: 3rem;
   font-weight: 300;
   padding: 1rem 2rem;
-  color: #7391A4;
+  color: #fff;
   text-decoration: none;
   text-transform: uppercase;
   background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #7391A4 50%);
@@ -129,7 +136,7 @@ li {
 
 .navigation__link:hover, .navigation__link:active {
   background-position: 100%;
-  color: #2B546E;
+  color: #fff;
   transform: translateX(1rem); }
 
 .navigation__checkbox:checked ~ .navigation__background {
@@ -174,10 +181,40 @@ li {
   transform: rotate(-135deg);
   top: 0; }
 
+main {
+  background: url("../assets/hero.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh; }
+
+.hero__section {
+  background-color: #7391A4;
+  opacity: 0.75;
+  color: black;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 60%;
+  padding: 16px;
+  border-radius: 2px; }
+  .hero__section h1 {
+    color: black;
+    z-index: 2; }
+
+input[type=text], input[type=password] {
+  width: 90%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1; }
+
 .blog__content {
   margin: 0 auto;
   margin-top: 10rem;
-  width: 75%; }
+  width: 65%; }
   .blog__content p {
     margin: 1rem; }
   .blog__content__image-text {
@@ -187,6 +224,7 @@ li {
   width: 50%; }
 
 footer {
+  margin-top: 10rem;
   margin-bottom: 10rem; }
 
 .footer {
@@ -207,8 +245,8 @@ path {
   margin: 0 auto; }
 
 object {
-  height: 100px;
-  width: 100px; }
+  height: 75px;
+  width: 75px; }
 
 .social {
   fill: #fff; }

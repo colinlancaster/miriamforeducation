@@ -1,0 +1,429 @@
+// RESET
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+// VARIABLES
+$color-primary: #2B546E;
+$color-highlight: #FE0000;
+$color-primary-dark: #052539;
+$color-primary-light-1: #4B7189;
+$color-primary-light-2: #7391A4;
+
+// MIXINS
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) { @content }; // 600px
+  }
+
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) { @content }; // 900px
+  }
+
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) { @content }; // 1200px
+  }
+
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) { @content }; // 1800px+
+  }
+
+}
+// HELPERS
+
+.center {
+  text-align: center;
+}
+
+// GENERAL
+
+.content {
+  margin: 0 auto;
+}
+
+a {
+  color: #fff;
+}
+
+
+a:visited {
+  color: darkred;
+}
+
+html {
+  font-size: 62.5%; // 10px;
+  height: 100%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  background-image: repeating-linear-gradient($color-primary-light-1 0%, $color-primary 100%);
+  // This is critical for getting the damn gradient to go all the way down the page.
+  background-attachment: fixed;
+  color: #fff;
+}
+
+// END ELEMENTS
+
+// HEADERS
+h1 {
+  font-size: 4rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+h3 {
+  font-size: 2rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+h4 {
+  text-align: center;
+  font-size: 1.75rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+li {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  list-style: none;
+}
+// END FONTS
+
+// END GENERAL
+
+// NAV
+
+.navigation {
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__button {
+    background-color: white;
+    height: 7rem;
+    width: 7rem;
+    position: fixed;
+    top: 6rem;
+    right: 6rem;
+    border-radius: 50%;
+    z-index: 2000;
+    box-shadow: 0 1rem 3rem rgba(black, .1);
+    text-align: center;
+    cursor: pointer;
+
+    @include respond(tab-port) {
+      top: 3.5rem;
+      right: 3.5rem;
+    }
+
+    @include respond(phone) {
+      top: 3.2rem;
+      right: 3.2rem;
+    }
+
+  }
+
+  &__background {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 6.5rem;
+    right: 6.5rem;
+    background-image: radial-gradient($color-primary-light-1, $color-primary);
+    z-index: 1000;
+    transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1); // https://easings.net
+
+    @include respond(tab-port) {
+      top: 4rem;
+      right: 4rem;
+    }
+
+    @include respond(phone) {
+      top: 3.5rem;
+      right: 3.5rem;
+    }
+  }
+
+  &__nav {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1500;
+
+    opacity: 0; // hides nav
+    width: 0; // hides nav
+    transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55); // https://easings.net
+
+  }
+
+  &__list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+    width: 100%;
+  }
+
+  &__item {
+    margin: 1rem;
+  }
+
+  &__link {
+
+    &:link,
+    &:visited {
+      display: inline-block;
+      font-size: 3rem;
+      font-weight: 300;
+      padding: 1rem 2rem;
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-primary-light-2 50%);
+      background-size: 220%;
+      transition: all .5s;
+
+      span {
+        margin-right: 1.5rem;
+        display: inline-block;
+      }
+    }
+
+    &:hover,
+    &:active {
+      background-position: 100%;
+      color: #fff;
+      transform: translateX(1rem);
+    }
+  }
+
+  // FUNCTIONALITY
+  &__checkbox:checked ~ &__background  {
+    transform: scale(80);
+  }
+
+  &__checkbox:checked ~ &__nav  {
+    opacity: 1; // shows nav
+    width: 100%; // shows nav
+  }
+
+  // ICON
+  &__icon {
+    position: relative;
+    margin-top: 3.4rem;
+
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 2px;
+      background-color: $color-primary-light-1;
+      display: inline-block;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all .75s;
+    }
+
+    &::before { top: -.8rem; }
+    &::after { top: .8rem; }
+  }
+
+  &__button:hover &__icon::before {
+    top: -1rem;
+  }
+
+  &__button:hover &__icon::after {
+    top: 1rem;
+  }
+
+  // When checkbox is checked, select its brother, &__button, and then select &__button's child, &__icon
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__button &__icon::before {
+    transform: rotate(135deg);
+    top: 0;
+  }
+
+  &__checkbox:checked + &__button &__icon::after {
+    transform: rotate(-135deg);
+    top: 0;
+  }
+}
+
+// END NAV
+
+// HERO
+
+main {
+  background:
+    url("../assets/hero.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+}
+
+.hero {
+
+  &__form-section {
+    background-color: #D3D3D3;
+    opacity: 0.95;
+    color: #000;
+    // Let's see how this looks
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65%;
+    padding: 16px;
+    border-radius: 2px;
+    text-align: center;
+
+    &--form {
+      color: #052539;
+      font-size: 1.5rem;
+    }
+
+    label {
+      margin-left: -60%;
+    }
+
+  }
+
+  h1 {
+    color: #052539;
+    z-index: 2;
+
+  }
+
+  &__form {
+    background-color: black;
+  }
+
+  input[type=text], input[type=password], input[type=email], select {
+    width: 60%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    color: darkslategrey;
+  }
+
+  input::placeholder {
+    font-size: 2rem;
+  }
+
+  .form-select select {
+    font-size: 2rem;
+    color: darkslategrey;
+  }
+
+  #choice {
+    color: rgb(146, 146, 146);
+  }
+
+  button {
+    padding: 2rem 16.5rem;
+    background-color: $color-primary-dark;
+    border: none;
+    color: white;
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    transition: .4s;
+  }
+
+  button:hover {
+    background-color: #4B7189;
+  }
+}
+
+
+
+
+// BLOG
+
+.blog__content {
+  margin: 0 auto;
+  margin-top: 10rem;
+  width: 65%;
+
+  p {
+    margin: 1rem;
+  }
+
+  &__image-text {
+    text-align: center;
+  }
+}
+
+.blog1-image {
+  width: 50%;
+}
+
+// FOOTER
+
+footer {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+.footer {
+  text-align: center;
+  font-size: 1.5rem;
+
+  &__text {
+    margin-top: 20px;
+  }
+}
+
+path {
+  fill: white;
+}
+
+.footer__icon-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  width: 50%;
+  margin: 0 auto;
+}
+
+object {
+  height: 75px;
+  width: 75px;
+}
+
+.social {
+  fill: #fff;
+}
+// END FOOTER

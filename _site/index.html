@@ -21,26 +21,48 @@
 
     <nav class="navigation__nav">
       <ul class="navigation__list">
-        <li class="navigation__item"><a href="#" class="navigation__link"><span>01</span>Home</a></li>
-        <li class="navigation__item"><a href="#" class="navigation__link"><span>02</span>Positions</a></li>
-        <li class="navigation__item"><a href="#" class="navigation__link"><span>03</span>Blogs</a></li>
-        <li class="navigation__item"><a href="#" class="navigation__link"><span>04</span>About</a></li>
-        <li class="navigation__item"><a href="#" class="navigation__link"><span>05</span>Contact</a></li>
+        <li class="navigation__item"><a href="/" class="navigation__link"><span>01</span>Home</a></li>
+        <li class="navigation__item"><a href="#positions" class="navigation__link"><span>02</span>Positions</a></li>
+        <li class="navigation__item"><a href="#blogs" class="navigation__link"><span>03</span>Blogs</a></li>
+        <li class="navigation__item"><a href="#about" class="navigation__link"><span>04</span>About</a></li>
+        <li class="navigation__item"><a href="#contact" class="navigation__link"><span>05</span>Contact</a></li>
       </ul>
     </nav>
   </div>
-    <div class="content"><h1>Miriam G. Cummins For School Board</h1>
+    <div class="content"><!-- <h1>Miriam G. Cummins For School Board</h1> -->
 
 <!--HERO IMAGE AND PRIMARY FORM-->
-<main class="hero">
-  here goes the image and CTA
+<main class="hero" id="hero">
+  <div class="hero__form-section">
+    <h1>Let's Make a Difference in our Children's Education</h1>
+    <form class="hero__form-section--form" action="" method="post">
+      <br/>
+      <input type="text" name="name" id="name" placeholder="Enter Name">
+      <br/>
+      <br/>
+      <input type="email" name="email" id="email" placeholder="Enter Email">
+      <br/>
+      <br/>
+      <div class="form-select">
+        <select id="choice" name="choice">
+          <option>Do You Support Miriam G. Cummins?</option>
+          <option value="Both">Yes, on both</option>
+          <option value="School Board At-Large #1">Yes, on School Board At-Large #1</option>
+          <option value="ESD Board Zone 6">Yes, on Linn Benton Lincoln ESD Board Zone 6</option>
+          <option value="No">No, on both</option>
+        </select>
+      </div>
+      <br/>
+      <button class="btn" type="submit">Act Now</button>
+    </form>
+  </div>
 </main>
 
-<section class="positions">
+<section class="positions" id="positions">
   positions go here
 </section>
 
-<section class="blogs">
+<section class="blogs" id="blogs">
   <ul>
       
         <li>
@@ -58,8 +80,12 @@
     </ul>
 </section>
 
-<section class="about">
+<section class="about" id="about">
   bio goes here
+</section>
+
+<section class="contact" id="contact">
+  contact form goes here
 </section></div>
     <footer>
   <div class="footer">
@@ -89,8 +115,9 @@
         </a>
       </li>
     </ul>
-    <p class="footer__text">Copyright Miriam G. Cummins 2019 ©</p>
+    <p class="footer__text">Copyright 2019 © Miriam G. Cummins</p>
   </div>
 </footer>
+    <script src="app.js"></script>
   </body>
 </html>
