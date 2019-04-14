@@ -3,29 +3,27 @@ title: Miriam G. Cummins For School Board
 layout: default
 ---
 
-<body>
-  <h1>{{ page.title }}</h1>
+<h1>{{ page.title }}</h1>
 
-  <!--HERO IMAGE AND PRIMARY FORM-->
-  <main class="hero">
-    here goes the image and CTA
-  </main>
+<!--HERO IMAGE AND PRIMARY FORM-->
+<main class="hero">
+  here goes the image and CTA
+</main>
 
-  <section class="positions">
-    positions go here
-  </section>
+<section class="positions">
+  positions go here
+</section>
 
-  <section class="blogs">
-    <ul>
-        {% for post in site.posts %}
-          <li>
-            <a href="/miriamforeducation{{ post.url }}">{{ post.title }}</a>
-          </li>
-        {% endfor %}
-      </ul>
-  </section>
+<section class="blogs">
+  <ul>
+      {% for post in site.posts %}
+        <li>
+          <a href="/miriamforeducation{{ post.url }}">{{ post.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+</section>
 
-  <section class="about">
-    bio goes here
-  </section>
-</body>
+<section class="about">
+  bio goes here
+</section>

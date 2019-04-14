@@ -33,20 +33,30 @@ $color-primary-light-2: #7391A4;
   }
 
 }
+// HELPERS
+
+.center {
+  text-align: center;
+}
+
+// .center {
+//   margin: 0 auto;
+// }
 
 // GENERAL
-
-// ELEMENTS
 html {
   // Defines default `font-size` of 1rem
-  font-size: 62.5%; // 10px
+  font-size: 62.5%; // 10px;
+  height: 100%;
 }
 
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.7;
-  background-color: $color-primary;
+  background-image: repeating-linear-gradient($color-primary-light-1 0%, $color-primary 100%);
+  // This is critical for getting the damn gradient to go all the way down the page.
+  background-attachment: fixed;
 }
 
 .content {
@@ -57,18 +67,33 @@ body {
 // HEADERS
 h1 {
   font-size: 4rem;
+  text-align: center;
 }
 
 h2 {
   font-size: 3rem;
+  text-align: center;
 }
 
 h3 {
   font-size: 2rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+h4 {
+  text-align: center;
+  font-size: 1.75rem;
 }
 
 p {
   font-size: 1.5rem;
+}
+
+li {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  list-style: none;
 }
 // END FONTS
 
@@ -247,7 +272,31 @@ p {
 
 // END NAV
 
+// BLOG
+
+.blog__content {
+  margin: 0 auto;
+  margin-top: 10rem;
+  width: 75%;
+
+  p {
+    margin: 1rem;
+  }
+
+  &__image-text {
+    text-align: center;
+  }
+}
+
+.blog1-image {
+  width: 50%;
+}
+
 // FOOTER
+
+footer {
+  margin-bottom: 10rem;
+}
 
 .footer {
   text-align: center;
@@ -271,9 +320,12 @@ path {
   margin: 0 auto;
 }
 
-
 object {
   height: 100px;
   width: 100px;
+}
+
+.social {
+  fill: #fff;
 }
 // END FOOTER
