@@ -1,0 +1,22 @@
+.about {
+
+  &__wrapper {
+    margin: 0 auto;
+    margin-top: 15rem;
+    width: 65%;
+  }
+
+  &__image-wrap {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .image {
+    border-radius: 50%;
+  }
+
+  p {
+    margin: 2rem;
+  }
+}

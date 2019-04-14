@@ -1,0 +1,87 @@
+// HERO
+
+main {
+  background:
+    url("../assets/hero.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+}
+
+.hero {
+
+  &__form-section {
+    //background-color: repeating-linear-gradient(#4B7189 0%, #2B546E 100%);
+    opacity: 0.95;
+    color: #000;
+    // Let's see how this looks
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65%;
+    padding: 16px;
+    border-radius: 2px;
+    text-align: center;
+
+    &--form {
+      color: #052539;
+      font-size: 1.5rem;
+    }
+
+    label {
+      margin-left: -60%;
+    }
+
+  }
+
+  h1 {
+    color: #052539;
+    z-index: 2;
+
+  }
+
+  &__form {
+    background-color: black;
+  }
+
+  input[type=text], input[type=password], input[type=email], select {
+    width: 60%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    color: darkslategrey;
+  }
+
+  input::placeholder {
+    font-size: 2rem;
+  }
+
+  .form-select select {
+    font-size: 2rem;
+    color: darkslategrey;
+  }
+
+  #choice {
+    color: rgb(146, 146, 146);
+  }
+
+  button {
+    padding: 2rem 16.5rem;
+    background-color: $color-primary-dark;
+    border: none;
+    color: white;
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    transition: .4s;
+  }
+
+  button:hover {
+    background-color: #4B7189;
+    cursor: pointer;
+  }
+}

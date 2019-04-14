@@ -1,3 +1,13 @@
 
 $baseurl: '{{ site.baseurl }}';
+@import 'reset';
+@import 'variables';
+@import 'elements';
+
 @import 'main';
+@import 'hero';
+@import 'positions';
+@import 'blog';
+@import 'footer';
+@import 'navigation';
+@import 'about';

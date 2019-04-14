@@ -1,0 +1,59 @@
+// VARIABLES
+$color-primary: #2B546E;
+$color-highlight: #FE0000;
+$color-primary-dark: #052539;
+$color-primary-light-1: #4B7189;
+$color-primary-light-2: #7391A4;
+a {
+  color: #fff;
+}
+
+
+a:visited {
+  color: darkred;
+}
+
+html {
+  font-size: 62.5%; // 10px;
+  height: 100%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  background-image: repeating-linear-gradient($color-primary-light-1 0%, $color-primary 100%);
+  // This is critical for getting the damn gradient to go all the way down the page.
+  background-attachment: fixed;
+  color: #fff;
+}
+
+h1 {
+  font-size: 4rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+h3 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+h4 {
+  text-align: center;
+  font-size: 1.75rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+li {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  list-style: none;
+}

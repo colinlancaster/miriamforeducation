@@ -1,0 +1,38 @@
+// FOOTER
+
+footer {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+.footer {
+  text-align: center;
+  font-size: 1.5rem;
+
+  &__text {
+    margin-top: 20px;
+  }
+}
+
+path {
+  fill: white;
+}
+
+.footer__icon-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  width: 50%;
+  margin: 0 auto;
+}
+
+object {
+  height: 75px;
+  width: 75px;
+}
+
+.social {
+  fill: #fff;
+}
+// END FOOTER

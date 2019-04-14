@@ -1,0 +1,64 @@
+// POSITIONS
+
+.positions {
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 20rem;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__section {
+    // display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+    // grid-column-gap: 2rem;
+    // align-items: center;
+    // grid-column-start: 2 / 5;
+    margin: 2rem;
+    margin-top: 5rem;
+    width: 100%;
+    flex-grow: 1;
+    }
+
+    &__text {
+
+    }
+
+}
+.feature-box {
+  background-color: rgba($color-primary-dark, .8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(black, .15);
+  transition: transform .3s;
+  margin: 5rem 0;
+
+  @include respond(tab-port) {
+    padding: 2rem;
+  }
+
+  &__text{
+    margin-bottom: 2.5rem;
+  }
+  &__icon {
+    font-size: 6rem;
+    margin-bottom: .5rem;
+    // There is a problem here. The icons used are not actually transparent.
+    // Otherwise, the below code would work
+    display: inline-block;
+    background-image: linear-gradient(to right, $color-primary-light-1, $color-primary-dark);
+    -webkit-background-clip: text;
+    background-clip: text;
+    // color: transparent;
+
+    @include respond(tab-port) {
+      margin-bottom: 0;
+    }
+
+  }
+  &:hover {
+    transform:  translateY(-1.5rem) scale(1.03);
+  }
+
+}
