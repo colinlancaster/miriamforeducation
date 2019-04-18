@@ -8,9 +8,13 @@
 .positions {
   width: 75%;
   margin: 0 auto;
-  margin-top: 20rem;
+  margin-top: 15rem;
   display: flex;
   flex-wrap: wrap;
+
+  h2 {
+    margin-top: 3rem;
+  }
 
   &__section {
     // display: grid;
