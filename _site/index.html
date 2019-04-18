@@ -9,6 +9,7 @@
       <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
       <link rel="shortcut icon" href="/miriamforeducation/favicon.ico" type="image/x-icon">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     </head>
   <body>
     <div class="navigation">
@@ -25,30 +26,31 @@
       <li class="navigation__item"><a href="/miriamforeducation/positions" class="navigation__link"><span>02</span>Positions</a></li>
       <li class="navigation__item"><a href="/miriamforeducation/blog" class="navigation__link"><span>03</span>Blogs</a></li>
       <li class="navigation__item"><a href="/miriamforeducation/about" class="navigation__link"><span>04</span>About</a></li>
-      <li class="navigation__item"><a href="/miriamforeducation/contact" class="navigation__link"><span>05</span>Contact</a></li>
+      <!-- <li class="navigation__item"><a href="/miriamforeducation/contact" class="navigation__link"><span>05</span>Contact</a></li> -->
     </ul>
   </nav>
 </div>
     <div class="content"><main class="hero" id="hero">
   <div class="hero__form-section">
     <h1>Let's Make a Difference in our Children's Education</h1>
-    <form class="hero__form-section--form" action="" method="post">
+    <form id="primaryForm" class="hero__form-section--form" action="https://docs.google.com/forms/d/e/1FAIpQLScTIcrWZovrOSWRTH4dNKy4X3r6eukUW4fE6ZqA-bJuA20fFg/formResponse" method="post" onsubmit='function(){window.location.replace("http://www.w3schools.com");}'>
       <br/>
-      <input type="text" name="name" id="name" placeholder="Enter Name">
+      <input type="text" name="entry.1938112197" id="name" placeholder="Enter Name">
       <br/>
       <br/>
-      <input type="email" name="email" id="email" placeholder="Enter Email">
+      <input type="email" name="emailAddress" id="email" placeholder="Enter Email">
       <br/>
       <br/>
       <div class="form-select">
-        <select id="choice" name="choice">
+        <select id="choice" name="">
           <option>Do You Support Miriam G. Cummins?</option>
-          <option value="Both">Yes, on both</option>
-          <option value="School Board At-Large #1">Yes, on School Board At-Large #1</option>
-          <option value="ESD Board Zone 6">Yes, on Linn Benton Lincoln ESD Board Zone 6</option>
+          <option name="Both">Yes, on both</option>
+          <option name="School Board At-Large #1">Yes, on School Board At-Large #1</option>
+          <option name="ESD Board Zone 6">Yes, on Linn Benton Lincoln ESD Board Zone 6</option>
           <option value="No">No, on both</option>
         </select>
       </div>
+      <input id="hiddenField" type="hidden" name="entry.90642667">
       <br/>
       <button class="btn" type="submit">Act Now</button>
     </form>

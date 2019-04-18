@@ -53,6 +53,10 @@ li {
 .content {
   margin: 0 auto; }
 
+#thankYou {
+  padding-top: 20rem;
+  color: #052539; }
+
 main {
   background: url("../assets/hero.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -469,3 +473,6 @@ object {
 
 .about p {
   margin: 2rem; }
+
+.contact {
+  height: 100vh; }
