@@ -65,3 +65,15 @@
   }
 
 }
+
+
+@include respond(tab-port) {
+
+  #postcard {
+    width: 75%;
+  }
+
+  .center img {
+    width: 100%;
+  }
+}

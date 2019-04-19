@@ -20,3 +20,19 @@
     margin: 2rem;
   }
 }
+
+#family__image-container {
+  text-align: center;
+}
+
+#family__image {
+  width: 50%;
+}
+
+
+@include respond(tab-port) {
+
+  #family__image {
+    width: 100%;
+  }
+}

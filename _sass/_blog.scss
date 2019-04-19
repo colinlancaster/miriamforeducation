@@ -189,13 +189,6 @@ $color-primary-light-2: #7391A4;
       }
     }
 
-    // &:hover &__side--front {
-    //   transform: rotateY(0);
-    // }
-
-    // &:hover &__side--back {
-    //   transform: rotateY(0);
-    // }
 
     &__details {
       padding: 0 1rem;
@@ -249,4 +242,26 @@ $color-primary-light-2: #7391A4;
 
 .blog1-image {
   width: 50%;
+}
+
+
+@include respond(tab-land) {
+
+  .blogs {
+    grid-template-columns: 1fr;
+    top: 50%;
+  }
+
+  .card {
+    margin: 5rem;
+  }
+
+  .card__side {
+    width: 100%;
+  }
+
+  .card__details {
+    padding: 5rem;
+    margin-top: 0;
+  }
 }

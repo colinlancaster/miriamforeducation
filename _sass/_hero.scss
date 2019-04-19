@@ -85,3 +85,28 @@ main {
     cursor: pointer;
   }
 }
+
+#hero__image {
+  width: 50%;
+}
+
+
+@include respond(tab-port) {
+
+  .hero__form-section {
+    top: 53%;
+    width: 95%;
+  }
+
+  .hero button {
+    padding: 1rem 10rem;
+  }
+
+  #hero__image {
+    width: 75%;
+  }
+  
+  .footer__icon-list {
+    width: 100%;
+  }
+}
