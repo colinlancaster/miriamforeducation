@@ -62,6 +62,9 @@ li {
   padding-top: 20rem;
   color: #052539; }
 
+#fourOhFour {
+  margin-top: 15rem; }
+
 main {
   background: url("../assets/hero.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -133,9 +136,11 @@ main {
 .positions {
   width: 75%;
   margin: 0 auto;
-  margin-top: 20rem;
+  margin-top: 15rem;
   display: flex;
   flex-wrap: wrap; }
+  .positions h2 {
+    margin-top: 3rem; }
   .positions__section {
     width: 100%;
     flex-grow: 1; }
