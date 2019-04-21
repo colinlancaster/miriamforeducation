@@ -250,6 +250,7 @@ $color-primary-light-2: #7391A4;
   .blogs {
     grid-template-columns: 1fr;
     top: 50%;
+    max-width: 100%;
   }
 
   .card {
@@ -263,5 +264,9 @@ $color-primary-light-2: #7391A4;
   .card__details {
     padding: 5rem;
     margin-top: 0;
+  }
+
+  .blog__content {
+    width: 85%;
   }
 }
