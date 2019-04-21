@@ -32,6 +32,10 @@
 
 @include respond(tab-port) {
 
+  .about__wrapper {
+    width: 85%;
+  }
+
   #family__image {
     width: 100%;
   }

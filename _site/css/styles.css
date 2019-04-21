@@ -382,6 +382,10 @@ object {
 .social {
   fill: #fff; }
 
+@media only screen and (max-width: 75em) {
+  .footer__icon-list {
+    width: 100%; } }
+
 .navigation__checkbox {
   display: none; }
 
@@ -532,6 +536,8 @@ object {
   width: 50%; }
 
 @media only screen and (max-width: 56.25em) {
+  .about__wrapper {
+    width: 85%; }
   #family__image {
     width: 100%; } }
 

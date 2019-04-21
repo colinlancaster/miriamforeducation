@@ -36,3 +36,10 @@ object {
   fill: #fff;
 }
 // END FOOTER
+
+@include respond(tab-land) {
+  .footer__icon-list {
+    width: 100%;
+  }
+
+}
