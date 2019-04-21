@@ -103,7 +103,8 @@ main {
   margin: 5px 0 22px 0;
   border: none;
   background: #f1f1f1;
-  color: darkslategrey; }
+  color: darkslategrey;
+  line-height: 2rem; }
 
 .hero input::placeholder {
   font-size: 2rem; }
@@ -341,7 +342,8 @@ main {
   .blogs {
     grid-template-columns: 1fr;
     top: 50%;
-    max-width: 100%; }
+    max-width: 100%;
+    margin-top: 10rem; }
   .card {
     margin: 5rem; }
   .card__side {
